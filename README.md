@@ -1,107 +1,63 @@
-# 📚 NoteVault — College Notes Portal
+# 📚 College Notes Portal
 
-A clean, fast React app for organizing college notes by year, subject, section, and unit.
-Built by **Sagar Saini** — [github.com/sagar-22-tech](https://github.com/sagar-22-tech)
+A simple and modern web application that allows students to **browse and access subject notes organized by academic year**.  
+The platform provides a clean interface where students can quickly find notes for their subjects without unnecessary complexity.
+
+This project focuses on improving accessibility to academic resources through a structured and easy-to-use interface.
 
 ---
 
-## 🚀 Getting Started
+## 🚀 Features
+
+- 📖 Browse notes by **academic year**
+- 📂 View **subject-wise notes**
+- 🎨 Clean and modern user interface
+- ⚡ Fast and lightweight frontend
+- 📱 Fully responsive design
+
+---
+
+## 📚 Available Subjects (3rd Year)
+
+The platform currently contains notes for the following subjects:
+
+- Computer Networks  
+- Data Analytics  
+- Software Engineering  
+- Machine Learning Techniques  
+- Idea of Business Models  
+- Indian Traditional Culture & Society  
+- Artificial Intelligence  
+- ASC  
+- COI  
+- DAA  
+- DBMS  
+- PYQ Papers  
+- Quantum  
+- WebD  
+- Syllabus  
+
+> Notes for **1st year, 2nd year, and 4th year** will be added in future updates.
+
+---
+
+## 🛠️ Tech Stack
+
+**Frontend**
+
+- React
+- TailwindCSS
+
+**Tools**
+
+- Node.js
+- Vite
+
+---
+
+## ⚙️ Getting Started
+
+### 1️⃣ Clone the repository
 
 ```bash
-# 1. Install dependencies
-npm install
-
-# 2. Start the dev server
-npm run dev
-
-# 3. Open in browser
-# → http://localhost:5173
-```
-
----
-
-## 📁 Project Structure
-
-```
-src/
-├── links/
-│   ├── year1.js        ← 1st Year Drive links  (edit when ready)
-│   ├── year2.js        ← 2nd Year Drive links  (edit when ready)
-│   ├── year3.js        ← 3rd Year Drive links  ✏️ EDIT THIS NOW
-│   └── year4.js        ← 4th Year Drive links  (edit when ready)
-│
-├── data/
-│   └── subjects.js     ← Subject names, icons, year config
-│
-├── components/
-│   ├── Navbar.jsx
-│   ├── Breadcrumb.jsx
-│   ├── Footer.jsx
-│   └── PreviewModal.jsx
-│
-├── pages/
-│   ├── HomePage.jsx
-│   ├── YearsPage.jsx
-│   ├── ComingSoonPage.jsx
-│   ├── SubjectsPage.jsx
-│   ├── SectionsPage.jsx
-│   ├── UnitsPage.jsx
-│   └── SyllabusPage.jsx
-│
-├── styles/
-│   ├── theme.css       ← CSS variables (dark/light)
-│   └── app.css         ← All component styles
-│
-├── App.jsx             ← Navigation logic
-└── main.jsx            ← Entry point
-```
-
----
-
-## ✏️ Adding Links (Day-to-Day Use)
-
-Open `src/links/year3.js` and paste your Google Drive links:
-
-```js
-computer_networks: {
-  college_notes: {
-    unit1: "https://drive.google.com/file/d/YOUR_ID/view",
-    unit2: "https://drive.google.com/file/d/YOUR_ID/view",
-    // ...
-  },
-  // ...
-},
-```
-
-> ⚠️ Make sure sharing is set to **"Anyone with the link"** in Google Drive.
-
----
-
-## 🔓 Unlocking a New Year
-
-**Step 1** — Open `src/data/subjects.js` and set `active: true` for that year:
-
-```js
-{ label: "2nd Year", value: 2, emoji: "📗", active: true, ... },
-```
-
-**Step 2** — Add subjects for that year in the same file:
-
-```js
-export const year2Subjects = [
-  { name: "Your Subject", icon: "📘", key: "your_subject_key" },
-  // ...
-  { name: "Syllabus (PDF)", icon: "📄", key: "syllabus", isSyllabus: true },
-];
-```
-
-**Step 3** — Open `src/links/year2.js` and add matching keys with links.
-
----
-
-## 🏗️ Build for Production
-
-```bash
-npm run build
-# Output goes to /dist — deploy to GitHub Pages, Vercel, Netlify, etc.
-```
+git clone https://github.com/yourusername/college-notes-portal.git
