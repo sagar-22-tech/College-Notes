@@ -33,6 +33,7 @@ export const year3Subjects = [
   { name: "Machine Learning Techniques", icon: "🤖", key: "machine_learning" },
   { name: "Idea of Business Models", icon: "💡", key: "business_models" },
   { name: "Indian Traditional Culture & Society", icon: "🏛️", key: "indian_culture" },
+  { name: "Big Data", icon: "📊", key: "big_data" },
   { name: "Complier Design", icon: "📟", key: "complier_design" },
   { name: "Artificial Intelligence", icon: "🧠", key: "artificial_intelligence" },
   { name: "ASC", icon: "📐", key: "asc" },

@@ -181,6 +181,30 @@ export const year3Links = {
       unit5: "",
     },
   },
+   // ── Big Data ────────────────────────────────
+  big_data: {
+    college_notes: {
+      unit1: "https://drive.google.com/file/d/13jBdZdMDLiX5teJcho22I-vpOVmKxbOH/view?usp=drive_link",
+      unit2: "https://drive.google.com/file/d/1_zpnA8StiLS9QjnbF7tIs6898Nx5OTzb/view?usp=drive_link",
+      unit3: "",
+      unit4: "",
+      unit5: "",
+    },
+    notes: {
+      unit1: "",
+      unit2: "",
+      unit3: "",
+      unit4: "",
+      unit5: "",
+    },
+    assignment: {
+      unit1: "",
+      unit2: "",
+      unit3: "",
+      unit4: "",
+      unit5: "",
+    },
+  },
     // ── Complier Design ────────────────────────────────
   complier_design: {
     college_notes: {
