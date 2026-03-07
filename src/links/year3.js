@@ -181,6 +181,30 @@ export const year3Links = {
       unit5: "",
     },
   },
+    // ── Complier Design ────────────────────────────────
+  complier_design: {
+    college_notes: {
+      unit1: "https://drive.google.com/file/d/1YGzIe8VzrJatZqQVk4YUeXEkkle59e3-/view?usp=drive_link",
+      unit2: "https://drive.google.com/file/d/1w4iGS58tD3wYam4qJZ3WQ8fWq110rPO2/view?usp=drive_link",
+      unit3: "",
+      unit4: "",
+      unit5: "",
+    },
+    notes: {
+      unit1: "",
+      unit2: "",
+      unit3: "",
+      unit4: "",
+      unit5: "",
+    },
+    assignment: {
+      unit1: "",
+      unit2: "",
+      unit3: "",
+      unit4: "",
+      unit5: "",
+    },
+  },
 
   // ── ASC ────────────────────────────────────────────────────
   asc: {

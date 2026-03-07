@@ -27,21 +27,22 @@ export const year2Subjects = [
 
 // ── 3rd Year ─────────────────────────────────────────────────
 export const year3Subjects = [
-  { name: "Computer Networks",                    icon: "🌐", key: "computer_networks"      },
-  { name: "Data Analytics",                       icon: "📊", key: "data_analytics"          },
-  { name: "Software Engineering",                 icon: "⚙️",  key: "software_engineering"   },
-  { name: "Machine Learning Techniques",          icon: "🤖", key: "machine_learning"        },
-  { name: "Idea of Business Models",              icon: "💡", key: "business_models"         },
-  { name: "Indian Traditional Culture & Society", icon: "🏛️", key: "indian_culture"         },
-  { name: "Artificial Intelligence",              icon: "🧠", key: "artificial_intelligence" },
-  { name: "ASC",                                  icon: "📐", key: "asc"                     },
-  { name: "COI",                                  icon: "⚖️",  key: "coi"                    },
-  { name: "DAA",                                  icon: "🔍", key: "daa"                     },
-  { name: "DBMS",                                 icon: "🗄️",  key: "dbms"                   },
-  { name: "PYQ Papers",                           icon: "📝", key: "pyq_papers"              },
-  { name: "Quantum",                              icon: "⚛️",  key: "quantum"                },
-  { name: "WebD",                                 icon: "🕸️",  key: "webd"                   },
-  { name: "Syllabus (PDF)",                       icon: "📄", key: "syllabus", isSyllabus: true },
+  { name: "Computer Networks", icon: "🌐", key: "computer_networks" },
+  { name: "Data Analytics", icon: "📊", key: "data_analytics" },
+  { name: "Software Engineering", icon: "⚙️", key: "software_engineering" },
+  { name: "Machine Learning Techniques", icon: "🤖", key: "machine_learning" },
+  { name: "Idea of Business Models", icon: "💡", key: "business_models" },
+  { name: "Indian Traditional Culture & Society", icon: "🏛️", key: "indian_culture" },
+  { name: "Complier Design", icon: "📟", key: "complier_design" },
+  { name: "Artificial Intelligence", icon: "🧠", key: "artificial_intelligence" },
+  { name: "ASC", icon: "📐", key: "asc" },
+  { name: "COI", icon: "⚖️", key: "coi" },
+  { name: "DAA", icon: "🔍", key: "daa" },
+  { name: "DBMS", icon: "🗄️", key: "dbms" },
+  { name: "PYQ Papers", icon: "📝", key: "pyq_papers" },
+  { name: "Quantum", icon: "⚛️", key: "quantum" },
+  { name: "WebD", icon: "🕸️", key: "webd" },
+  { name: "Syllabus (PDF)", icon: "📄", key: "syllabus", isSyllabus: true },
 ];
 
 // ── 4th Year ─────────────────────────────────────────────────
@@ -56,15 +57,15 @@ export const year4Subjects = [
 export const YEARS_CONFIG = [
   { label: "1st Year", value: 1, emoji: "🌱", active: false, subjects: year1Subjects, links: year1Links },
   { label: "2nd Year", value: 2, emoji: "📗", active: false, subjects: year2Subjects, links: year2Links },
-  { label: "3rd Year", value: 3, emoji: "🎓", active: true,  subjects: year3Subjects, links: year3Links },
+  { label: "3rd Year", value: 3, emoji: "🎓", active: true, subjects: year3Subjects, links: year3Links },
   { label: "4th Year", value: 4, emoji: "🏆", active: false, subjects: year4Subjects, links: year4Links },
 ];
 
 // ── Sections (same for all years) ────────────────────────────
 export const SECTIONS = [
   { key: "college_notes", label: "College Notes", icon: "🏫", desc: "Official college provided notes" },
-  { key: "notes",         label: "Notes",         icon: "📓", desc: "Handwritten & curated notes"    },
-  { key: "assignment",    label: "Assignment",     icon: "📋", desc: "Assignment sheets & solutions"  },
+  { key: "notes", label: "Notes", icon: "📓", desc: "Handwritten & curated notes" },
+  { key: "assignment", label: "Assignment", icon: "📋", desc: "Assignment sheets & solutions" },
 ];
 
 export const UNITS = [1, 2, 3, 4, 5];
