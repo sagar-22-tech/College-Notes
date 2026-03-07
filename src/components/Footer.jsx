@@ -22,7 +22,7 @@ export default function Footer() {
         </a>
         <span className="footer-dot">·</span>
         <span className="footer-credit">
-          Created &amp; Managed by <strong>Sagar Saini</strong>
+          Created &amp; Managed by <strong>Sagar</strong>
         </span>
       </div>
     </footer>
