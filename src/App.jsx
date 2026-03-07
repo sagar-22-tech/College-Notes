@@ -1,18 +1,18 @@
 import { useState, useEffect } from "react";
 import { YEARS_CONFIG } from "./data/subjects";
 
-import Navbar        from "./components/Navbar";
-import Breadcrumb    from "./components/Breadcrumb";
-import Footer        from "./components/Footer";
-import PreviewModal  from "./components/PreviewModal";
+import Navbar from "./components/Navbar";
+import Breadcrumb from "./components/Breadcrumb";
+import Footer from "./components/Footer";
+import PreviewModal from "./components/PreviewModal";
 
-import HomePage      from "./pages/HomePage";
-import YearsPage     from "./pages/YearsPage";
+import HomePage from "./pages/HomePage";
+import YearsPage from "./pages/YearsPage";
 import ComingSoonPage from "./pages/ComingSoonPage";
-import SubjectsPage  from "./pages/SubjectsPage";
-import SectionsPage  from "./pages/SectionsPage";
-import UnitsPage     from "./pages/UnitsPage";
-import SyllabusPage  from "./pages/SyllabusPage";
+import SubjectsPage from "./pages/SubjectsPage";
+import SectionsPage from "./pages/SectionsPage";
+import UnitsPage from "./pages/UnitsPage";
+import SyllabusPage from "./pages/SyllabusPage";
 
 import "./styles/theme.css";
 import "./styles/app.css";
@@ -22,9 +22,9 @@ import "./styles/app.css";
 // Pages: home | yearSelect | comingsoon | subjects | sections | units | syllabus
 
 export default function App() {
-  const [stack,   setStack]   = useState([{ page: "home" }]);
-  const [isDark,  setIsDark]  = useState(true);
-  const [modal,   setModal]   = useState(null);   // { subject, section, unit }
+  const [stack, setStack] = useState([{ page: "home" }]);
+  const [isDark, setIsDark] = useState(true);
+  const [modal, setModal] = useState(null);   // { subject, section, unit }
 
   const current = stack[stack.length - 1];
 
@@ -33,13 +33,13 @@ export default function App() {
 
   // Build breadcrumb labels from the stack
   const crumbs = stack.map((e) => {
-    if (e.page === "home")       return "Home";
+    if (e.page === "home") return "Home";
     if (e.page === "yearSelect") return "Select Year";
     if (e.page === "comingsoon") return e.payload?.yearConfig?.label || "Coming Soon";
-    if (e.page === "subjects")   return e.payload?.yearConfig?.label || "Subjects";
-    if (e.page === "sections")   return e.payload?.subject?.name || "Subject";
-    if (e.page === "units")      return e.payload?.section?.label || "Section";
-    if (e.page === "syllabus")   return "Syllabus";
+    if (e.page === "subjects") return e.payload?.yearConfig?.label || "Subjects";
+    if (e.page === "sections") return e.payload?.subject?.name || "Subject";
+    if (e.page === "units") return e.payload?.section?.label || "Section";
+    if (e.page === "syllabus") return "Syllabus";
     return "";
   });
 
@@ -109,8 +109,8 @@ export default function App() {
                 push({
                   page: "units",
                   payload: {
-                    subject:    current.payload.subject,
-                    section:    sec,
+                    subject: current.payload.subject,
+                    section: sec,
                     yearConfig: current.payload.yearConfig,
                   },
                 })
@@ -136,7 +136,7 @@ export default function App() {
         {modal && <PreviewModal data={modal} onClose={() => setModal(null)} />}
       </div>
 
-      <Footer />
+
     </div>
   );
 }
