@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { YEARS_CONFIG } from "./data/subjects";
+import { Analytics } from "@vercel/analytics/react";
 
 import Navbar from "./components/Navbar";
 import Breadcrumb from "./components/Breadcrumb";
@@ -136,7 +137,7 @@ export default function App() {
         {modal && <PreviewModal data={modal} onClose={() => setModal(null)} />}
       </div>
 
-
+      <Analytics />
     </div>
   );
 }

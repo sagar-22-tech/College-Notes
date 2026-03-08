@@ -39,7 +39,7 @@ export default function Navbar({ crumbs, isDark, onToggle, onCrumbClick }) {
           </span>
         )}
         <a
-          href=""
+          href="https://github.com/sagar-22-tech"
           target="_blank"
           rel="noopener noreferrer"
           className="github-link"
