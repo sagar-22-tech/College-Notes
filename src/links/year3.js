@@ -10,8 +10,8 @@ export const year3Links = {
   // ── Computer Networks ──────────────────────────────────────
   computer_networks: {
     college_notes: {
-      unit1: "https://drive.google.com/file/d/1Pjpy72crZm6Lmt_mwugyyw_J8PZA2Zgy/view?usp=drive_link",
-      unit2: "https://drive.google.com/file/d/1swb2MxpOreOw3eJe4fDhGKLtIMm9sRLO/view?usp=drive_link",
+      unit1: "https://drive.google.com/file/d/1XbhHYlZREjl2b0HRZjpotKpD4w4Fm6B2/view?usp=drive_link",
+      unit2: "https://drive.google.com/file/d/19WapKd8eADzmYfoLJOUXfeq9tPVJ0liZ/view?usp=drive_link",
       unit3: "https://drive.google.com/file/d/1LxOoYXVOkcRXjuoUjkDCvYN0FDOOK5OH/view?usp=drive_link",
       unit4: "https://drive.google.com/file/d/1okpyupruW6Hcv3-vpk27J5y-SVnHcani/view?usp=drive_link",
       unit5: "https://drive.google.com/file/d/1BnuKpnDPNYvTHZqWJ6dyWSjFHAx8ObSh/view?usp=drive_link",
