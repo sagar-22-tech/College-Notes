@@ -2,18 +2,18 @@ import { useState, useEffect } from "react";
 import { YEARS_CONFIG } from "./data/subjects";
 import { Analytics } from "@vercel/analytics/react";
 
-import Navbar from "./components/Navbar";
-import Breadcrumb from "./components/Breadcrumb";
-import Footer from "./components/Footer";
-import PreviewModal from "./components/PreviewModal";
+import Navbar        from "./components/Navbar";
+import Breadcrumb    from "./components/Breadcrumb";
+import Footer        from "./components/Footer";
+import PreviewModal  from "./components/PreviewModal";
 
-import HomePage from "./pages/HomePage";
-import YearsPage from "./pages/YearsPage";
+import HomePage      from "./pages/HomePage";
+import YearsPage     from "./pages/YearsPage";
 import ComingSoonPage from "./pages/ComingSoonPage";
-import SubjectsPage from "./pages/SubjectsPage";
-import SectionsPage from "./pages/SectionsPage";
-import UnitsPage from "./pages/UnitsPage";
-import SyllabusPage from "./pages/SyllabusPage";
+import SubjectsPage  from "./pages/SubjectsPage";
+import SectionsPage  from "./pages/SectionsPage";
+import UnitsPage     from "./pages/UnitsPage";
+import SyllabusPage  from "./pages/SyllabusPage";
 
 import "./styles/theme.css";
 import "./styles/app.css";
@@ -23,24 +23,53 @@ import "./styles/app.css";
 // Pages: home | yearSelect | comingsoon | subjects | sections | units | syllabus
 
 export default function App() {
-  const [stack, setStack] = useState([{ page: "home" }]);
-  const [isDark, setIsDark] = useState(true);
-  const [modal, setModal] = useState(null);   // { subject, section, unit }
+  const [stack,   setStack]   = useState([{ page: "home" }]);
+  const [isDark,  setIsDark]  = useState(true);
+  const [modal,   setModal]   = useState(null);   // { subject, section, unit }
 
   const current = stack[stack.length - 1];
 
-  const push = (entry) => setStack((s) => [...s, entry]);
+  // ── Push a dummy history entry every time the in-app stack grows.
+  // When the user hits the browser/mobile back button, popstate fires
+  // and we pop our own stack instead of leaving the site.
+  const push = (entry) => {
+    window.history.pushState({ appNav: true }, "");
+    setStack((s) => [...s, entry]);
+  };
+
   const goTo = (index) => setStack((s) => s.slice(0, index + 1));
+
+  // Close modal on back if open, otherwise pop the in-app stack.
+  useEffect(() => {
+    const onPopState = () => {
+      if (modal) {
+        setModal(null);
+        // Re-push so the history entry count stays in sync
+        window.history.pushState({ appNav: true }, "");
+        return;
+      }
+      setStack((s) => {
+        if (s.length > 1) return s.slice(0, -1);
+        // Already at home — push a guard entry back so the next
+        // back press doesn't immediately close the tab/app
+        window.history.pushState({ appNav: true }, "");
+        return s;
+      });
+    };
+
+    window.addEventListener("popstate", onPopState);
+    return () => window.removeEventListener("popstate", onPopState);
+  }, [modal]);
 
   // Build breadcrumb labels from the stack
   const crumbs = stack.map((e) => {
-    if (e.page === "home") return "Home";
+    if (e.page === "home")       return "Home";
     if (e.page === "yearSelect") return "Select Year";
     if (e.page === "comingsoon") return e.payload?.yearConfig?.label || "Coming Soon";
-    if (e.page === "subjects") return e.payload?.yearConfig?.label || "Subjects";
-    if (e.page === "sections") return e.payload?.subject?.name || "Subject";
-    if (e.page === "units") return e.payload?.section?.label || "Section";
-    if (e.page === "syllabus") return "Syllabus";
+    if (e.page === "subjects")   return e.payload?.yearConfig?.label || "Subjects";
+    if (e.page === "sections")   return e.payload?.subject?.name || "Subject";
+    if (e.page === "units")      return e.payload?.section?.label || "Section";
+    if (e.page === "syllabus")   return "Syllabus";
     return "";
   });
 
@@ -110,8 +139,8 @@ export default function App() {
                 push({
                   page: "units",
                   payload: {
-                    subject: current.payload.subject,
-                    section: sec,
+                    subject:    current.payload.subject,
+                    section:    sec,
                     yearConfig: current.payload.yearConfig,
                   },
                 })
