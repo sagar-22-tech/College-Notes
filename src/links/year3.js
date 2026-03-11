@@ -107,7 +107,7 @@ export const year3Links = {
     },
   },
 
-  // ── Idea of Business Models ────────────────────────────────
+  // ── Idea To Business Models ────────────────────────────────
   business_models: {
     college_notes: {
       unit1: "https://drive.google.com/file/d/165hC9QHGS-GnASv6tk-Yz6Iidl9BvEjK/view?usp=sharing",
