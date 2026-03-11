@@ -110,8 +110,8 @@ export const year3Links = {
   // ── Idea of Business Models ────────────────────────────────
   business_models: {
     college_notes: {
-      unit1: "",
-      unit2: "",
+      unit1: "https://drive.google.com/file/d/165hC9QHGS-GnASv6tk-Yz6Iidl9BvEjK/view?usp=sharing",
+      unit2: "https://drive.google.com/file/d/19NseFjp9YKMgH3Ymv6QYfe41gY2vLxAu/view?usp=sharing",
       unit3: "",
       unit4: "",
       unit5: "",
